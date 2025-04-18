@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website for my minion</title>
+    <script src="..\script\index.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DLgg58O9.css">
+  </head>
+  <body>
+  
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .section {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input[type="password"] {
+            padding: 10px;
+            margin: 10px 0;
+            width: 80%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #message-section, #error-message {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="section" id="passcode-section">
+        <h1>Enter the Secret Passcode</h1>
+        <form id="passcode-form">
+            <input type="password" id="passcode" name="passcode" placeholder="Enter passcode here">
+            <button type="submit">Proceed</button>
+        </form>
+        <p id="error-message">Mali nilagay mo, subukan mo ulit</p>
+    </div>
+    <div class="section" id="message-section">
+        <h1>Special Message for my Minion</h1>
+        <div class="letter-container">
+            <p>Click and pull out the letter, rawr! 🐯</p>
+            <div class="envelope">
+                <div class="envelope-front"></div>
+                <div class="envelope-back"></div>
+                <div class="letter">
+                    <p>Hey there my cutie putotie minion ko! Just a little reminder that you're my favorite person in this whole universe. You make every day brighter, and I'm so lucky to have you in my life. I want us to end up with each other and ayokong umabot sa part na sabihin ko sayong "you deserve someone better than me" kasi gusto ko ako yung someone na better. I want to be a better person for you. Ikaw gusto kong maksama, ngayon at hanggang dulo, walang iba. I love you po and sana nagustuhan mo tong website na to hehe. Keep safe and stay hydrated my love. I love youuuuuuuuuuuu</p>
+                    <p>- Your Smurf💖</p>
+                </div>
+            </div>
+        </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('passcode-form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent the form from submitting
+            var passcode = document.getElementById('passcode').value;
+            var messageSection = document.getElementById('message-section');
+            var errorMessage = document.getElementById('error-message');
+            var passcodeSection = document.getElementById('passcode-section');
+            
+            if (passcode === '080224') {
+                messageSection.style.display = 'block';
+                passcodeSection.style.display = 'none';
+            } else {
+                errorMessage.style.display = 'block';
+                setTimeout(function() {
+                    errorMessage.style.display = 'none';
+                }, 3000); // Hide error message after 3 seconds
+            }
+        });
+    </script>
+</body>
+</html>
